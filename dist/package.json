@@ -5,6 +5,9 @@
   "dependencies": {
     "printer": "0.0.2"
   },
+  "devDependencies": {
+    "node-webkit-builder": "^0.3.2"
+  },
   "window": {
     "title": "MeetingsAPP",
     "toolbar": false,

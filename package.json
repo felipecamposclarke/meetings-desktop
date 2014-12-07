@@ -29,6 +29,7 @@
     "gulp-ng-constant": "^0.2.0",
     "gulp-util": "^3.0.1",
     "gulp-rename": "^1.2.0",
+    "gulp-shell": "^0.2.11",
     "main-bower-files": "~2.4.0",
     "jshint-stylish": "~1.0.0",
     "wiredep": "~2.2.0",
