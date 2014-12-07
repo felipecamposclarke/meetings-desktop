@@ -1,0 +1,35 @@
+<!-- start navbar -->
+<div ng-include="'app/components/navbar/navbar.html'"></div>
+<!-- end navbar -->
+
+
+
+<!-- start container -->
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-md-4" ng-repeat="meeting in meetings">
+      <div class="thumbnail">
+	<button type="button" class="btn btn-primary btn-print" ng-click="printOut()">
+	  <span class="glyphicon glyphicon-print"></span>
+	</button>
+	<div class="caption">
+	  <h3>{{meeting.title}}</h3>
+	  <p>{{meeting.description}}</p>
+	  <p><a ng-href="{{awesomeThing.url}}">{{meeting.author}}</a></p>
+	</div>
+	<div class="date">
+	  <span class="glyphicon glyphicon-calendar"></span>
+	  <span>{{meeting.date}}</span>
+	</div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+<!-- end container -->
+
+<!-- start footer -->
+<div class="footer">
+  <p class="text-center">With ♥ from <a href="http://latamticket.com">LatamTicket</a></p>
+</div>
+<!-- end footer -->
