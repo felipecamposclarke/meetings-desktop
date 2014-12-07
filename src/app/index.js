@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('meetingsDesktop', ['ngAnimate', 'ngTouch', 'ngSanitize', 'ui.router', 'ui.bootstrap', 'restmod'])
+angular.module('meetingsDesktop', ['ngAnimate', 'ngTouch', 'ngSanitize', 'ui.router', 'ui.bootstrap', 'restmod', 'app.config'])
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('home', {

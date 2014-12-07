@@ -8,6 +8,8 @@ var browserSync = require('browser-sync');
 
 var middleware = require('./proxy');
 
+require('./config');
+
 function browserSyncInit(baseDir, files, browser) {
   browser = browser === undefined ? 'default' : browser;
 
@@ -32,7 +34,7 @@ function browserSyncInit(baseDir, files, browser) {
 
 }
 
-gulp.task('serve', ['watch'], function () {
+gulp.task('serve', ['config', 'watch'], function () {
   browserSyncInit([
     'src',
     '.tmp'

@@ -16,6 +16,6 @@
 */
 
 angular.module('meetingsDesktop')
-  .factory('Meeting', function(restmod) {
-    return restmod.model('http://localhost:3000/api/meetings');
+  .factory('Meeting', function(restmod, ENV) {
+    return restmod.model(ENV.API_BASE_URL + '/meetings');
   });
