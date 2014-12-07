@@ -17,5 +17,11 @@
 
 angular.module('meetingsDesktop')
   .factory('Meeting', function(restmod, ENV) {
-    return restmod.model(ENV.API_BASE_URL + '/meetings');
+    return restmod.model(ENV.API_BASE_URL + '/meetings', {
+        $hooks: {
+            'after-feed': function() {
+                this.date = new Date(this.date);
+            }
+        }
+    });
   });
