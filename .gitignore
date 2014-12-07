@@ -1,6 +1,7 @@
-dist/
 node_modules/
 bower_components/
 src/app/common/modules/
 .sass-cache/
 .tmp/
+dist/*
+!dist/package.json
