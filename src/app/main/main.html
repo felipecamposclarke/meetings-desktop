@@ -2,14 +2,12 @@
 <div ng-include="'app/components/navbar/navbar.html'"></div>
 <!-- end navbar -->
 
-
-
 <!-- start container -->
 <div class="container">
   <div class="row">
     <div class="col-sm-6 col-md-4" ng-repeat="meeting in meetings">
       <div class="thumbnail">
-	<button type="button" class="btn btn-primary btn-print" ng-click="printOut()">
+	<button type="button" class="btn btn-primary btn-print" ng-click="printOut(meeting)">
 	  <span class="glyphicon glyphicon-print"></span>
 	</button>
 	<div class="caption">

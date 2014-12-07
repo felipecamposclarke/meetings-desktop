@@ -1,6 +1,9 @@
 'use strict';
 
 angular.module('meetingsDesktop', ['ngAnimate', 'ngTouch', 'ngSanitize', 'ui.router', 'ui.bootstrap', 'restmod', 'app.config'])
+  // ----------------------
+  // ROUTER CONFIG
+  // ----------------------
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('home', {
@@ -20,4 +23,11 @@ angular.module('meetingsDesktop', ['ngAnimate', 'ngTouch', 'ngSanitize', 'ui.rou
       });
 
     $urlRouterProvider.otherwise('/');
+  })
+  // ----------------------
+  // RUN APP
+  // ----------------------
+  .run(function($rootScope) {
+    // objects that need to communicate between different windows
+    $rootScope.currentPrinter = undefined;
   });
