@@ -49,11 +49,11 @@ angular.module('meetingsDesktop')
 
       // send the Instruction to print
       printer.printDirect({
-	data: printableText,
-	printer: printerName,
-	type: PRINTER_TYPE,
-	success:function() { deferred.resolve(); },
-	error:function(err) { deferred.reject(err); }
+      	data: printableText,
+      	printer: printerName,
+      	type: PRINTER_TYPE,
+      	success:function() { deferred.resolve(); },
+      	error:function(err) { deferred.reject(err); }
       });
 
       return deferred.promise;
